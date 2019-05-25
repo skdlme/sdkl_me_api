@@ -25,14 +25,6 @@ api_versions.map(api => {
   }
 
 
-  // routeMap.map(rm => {
-  //   if (rm.modules.routes !== undefined) {
-  //     rm.modules.routes.map(r => {
-  //       eval(`router.${r.Method}(${"'/' + rm.version + r.Path"},r.Function);`)
-  //     })
-  //   }
-  // });
-
 
 });
 
