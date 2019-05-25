@@ -43,8 +43,8 @@ const WatchAclList = function (req, res, next) {
 };
 
 
-// DELETE  /calendars/calendarId/acl/ruleId	Deletes an access control rule.
 // GET  /calendars/calendarId/acl/ruleId	Returns an access control rule.
+// DELETE  /calendars/calendarId/acl/ruleId	Deletes an access control rule.
 router.route('/calendars/:calendarId/acl/:ruleId')
     .get(GetAclRule)
     .delete(DeleteAclRule);
@@ -56,24 +56,17 @@ router.route('/calendars/:calendarId/acl')
 
 // GET  /calendars/calendarId/acl	        Returns the rules in the access control list for the calendar.
 router.route('/calendars/:calendarId/acl/')
-    .get(GetAclRule)
+    .get(GetAclList)
 
 // PATCH  /calendars/calendarId/acl/ruleId	Updates an access control rule. This method supports patch semantics.
 // PUT  /calendars/calendarId/acl/ruleId	Updates an access control rule.
 router.route('/calendars/:calendarId/acl/:ruleId')
-    .patch(GetAclRule)
-    .put(CreateAclRule)
+    .patch(UpdateAclList)
+    .put(ReplaceAclList)
 
 // POST  /calendars/calendarId/acl/watch	Watch for changes to ACL resources.
 router.route('/calendars/:calendarId/acl/watch')
-    .post(CreateAclRule)
-
-
-
-
-
-
-
+    .post(WatchAclList)
 
 
 const getStatus = function (req, res, next) {
