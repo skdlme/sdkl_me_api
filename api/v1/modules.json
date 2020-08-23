@@ -1,0 +1,45 @@
+{
+    "Acl": [{
+            "Path": "/calendars/:calendarId/acl/:ruleId",
+            "Function": "GetAclRule",
+            "Method": "get"
+        },
+        {
+            "Path": "/calendars/:calendarId/acl/:ruleId",
+            "Function": "DeleteAclRule",
+            "Method": "delete"
+        },
+        {
+            "Path": "/calendars/:calendarId/acl/:ruleId",
+            "Function": "UpdateAclRule",
+            "Method": "patch"
+        },
+        {
+            "Path": "/calendars/:calendarId/acl/:ruleId",
+            "Function": "ReplaceAclRule",
+            "Method": "put"
+        },
+        {
+            "Path": "/calendars/:calendarId/acl/",
+            "Function": "CreateAclRule",
+            "Method": "post"
+        },
+        {
+            "Path": "/calendars/:calendarId/acl/",
+            "Function": "GetAclList",
+            "Method": "get"
+        },
+        {
+            "Path": "/calendars/:calendarId/acl/watch",
+            "Function": "WatchAclList",
+            "Method": "post"
+        }
+    ],
+    "CalendarList":[],
+    "Calendars":[],
+    "Channels":[],
+    "Colors":[],
+    "Events":[],
+    "Freebusy":[],
+    "Settings":[]
+}
